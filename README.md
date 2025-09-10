@@ -43,7 +43,7 @@ If you are using an [MDC theme](https://material.io/develop/web/docs/theming) yo
 
 Import \_index.scss or other file(s) that contains material styling variables like --mdc-theme-primary --mdc-theme-secondary and other root variables to the App.svelte (your base +layout.svelte in sveltekit templates) file so they get applied to the ui-components.
 
-See https://github.com/silinternational/ui-components/blob/develop/stories/_theme.scss for exposed theme properties.
+See https://github.com/sil-org/ui-components/blob/develop/stories/_theme.scss for exposed theme properties.
 
 ## typography
 
@@ -125,7 +125,7 @@ https://github.com/sveltejs/kit/issues/885
 
 ## components
 
-A list of all components and their props can be found in our running instance of [Storybook](https://silinternational.github.io/ui-components/).
+A list of all components and their props can be found in our running instance of [Storybook](https://sil-org.github.io/ui-components/).
 
 ## importing components
 
@@ -136,15 +136,15 @@ Just include `import { Button } from '@silintl/ui-components'` (~~Sveltekit/~~Vi
 
 ## overriding default sass variables
 
-In your main sass file just use the following pattern to override any sass variables. See https://github.com/silinternational/ui-components/blob/develop/stories/_index.scss for exposed sass variables.
+In your main sass file just use the following pattern to override any sass variables. See https://github.com/sil-org/ui-components/blob/develop/stories/_index.scss for exposed sass variables.
 
 `@use './components/mdc/Button' with ( $radius: 16px );`
 
 ## examples and templates
 
-See our [Storybook](https://silinternational.github.io/ui-components/?path=/docs/example-introduction--page) for examples. Just click on the component you want to learn more about. You can also click on the "Docs" tab to right of "Canvas" in the top left of the page and then click "Show code" to see code examples. See our [Button](https://silinternational.github.io/ui-components/?path=/docs/atoms-button--primary) Docs for example.
+See our [Storybook](https://sil-org.github.io/ui-components/?path=/docs/example-introduction--page) for examples. Just click on the component you want to learn more about. You can also click on the "Docs" tab to right of "Canvas" in the top left of the page and then click "Show code" to see code examples. See our [Button](https://sil-org.github.io/ui-components/?path=/docs/atoms-button--primary) Docs for example.
 
-An opinionated Svelte template using rollup https://github.com/silinternational/the-way-svelte
+An opinionated Svelte template using rollup https://github.com/sil-org/the-way-svelte
 
 A template using Vite https://github.com/hobbitronics/mikes-svelte-template
 
@@ -184,7 +184,7 @@ An example of using Drawer:
 			},
 			{},
 			{
-				url: 'https://silinternational.github.io/ui-components/index.html?path=/story/atoms-button--primary',
+				url: 'https://sil-org.github.io/ui-components/index.html?path=/story/atoms-button--primary',
 				label: 'see our components in storybook'
 			}
 		]
@@ -211,16 +211,16 @@ An example of using Drawer:
 
 ## storybook
 
-Try out our components and see usage examples at https://silinternational.github.io/ui-components/.
-You can also run storybook locally. Just run `git clone git@github.com:silinternational/ui-components.git` on your machine and run `npm install` then `npm run dev` in your terminal. Storybook should open a browser window when it finishes building.
+Try out our components and see usage examples at https://sil-org.github.io/ui-components/.
+You can also run storybook locally. Just run `git clone git@github.com:sil-org/ui-components.git` on your machine and run `npm install` then `npm run dev` in your terminal. Storybook should open a browser window when it finishes building.
 
 ## CSS utility classes
 
-Classes from [global.scss](https://github.com/silinternational/ui-components/blob/develop/components/global.scss) can be applied to all components and even components and elements from your app. Since classes applied to Svelte components using `$$props.class` (e.g. `Button class="my-class"`) need to be global in scope these utility classes can be handy. Alternatively you can use `:global(.my-class) {...}` inside your `<style>` tags (which makes them truly global css styles so be careful!) or declare global styles elsewhere.
+Classes from [global.scss](https://github.com/sil-org/ui-components/blob/develop/components/global.scss) can be applied to all components and even components and elements from your app. Since classes applied to Svelte components using `$$props.class` (e.g. `Button class="my-class"`) need to be global in scope these utility classes can be handy. Alternatively you can use `:global(.my-class) {...}` inside your `<style>` tags (which makes them truly global css styles so be careful!) or declare global styles elsewhere.
 
 ## contributions
 
-All commit messages must follow the format defined in our [release.config.js file](https://github.com/silinternational/ui-components/blob/develop/release.config.js) for a release to be triggered upon merging to main. Here are basic examples:
+All commit messages must follow the format defined in our [release.config.js file](https://github.com/sil-org/ui-components/blob/develop/release.config.js) for a release to be triggered upon merging to main. Here are basic examples:
 
 - `add(Button): Added 'class' prop` (minor release)
 

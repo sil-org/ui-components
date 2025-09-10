@@ -30,7 +30,7 @@ function onClick() {
 
 <!--
   Used to toggle an item on tablet and mobile devices or immediately activate/deactivate something
-  see https://silinternational.github.io/ui-components/?path=/docs/atoms-switch--primary for usage
+  see https://sil-org.github.io/ui-components/?path=/docs/atoms-switch--primary for usage
 -->
 
 <button
