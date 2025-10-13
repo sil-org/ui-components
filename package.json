@@ -1,6 +1,6 @@
 {
   "name": "@silintl/ui-components",
-  "version": "11.10.0",
+  "version": "11.10.1",
   "description": "Reusable Svelte components for some internal applications",
   "main": "index.mjs",
   "module": "index.mjs",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/silinternational/ui-components.git"
+    "url": "git+https://github.com/sil-org/ui-components.git"
   },
   "keywords": [
     "material",
@@ -29,9 +29,9 @@
   "author": "Michael Wilson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/silinternational/ui-components/issues"
+    "url": "https://github.com/sil-org/ui-components/issues"
   },
-  "homepage": "https://github.com/silinternational/ui-components#readme",
+  "homepage": "https://github.com/sil-org/ui-components#readme",
   "peerDependencies": {
     "material-components-web": "^14.0.0",
     "svelte": "^4.0.0"
@@ -48,7 +48,6 @@
     "@storybook/addon-essentials": "^7.6.17",
     "@storybook/addon-interactions": "^7.6.17",
     "@storybook/addon-links": "^7.6.17",
-    "@storybook/addon-mdx-gfm": "^7.6.17",
     "@storybook/addon-svelte-csf": "^4.1.1",
     "@storybook/blocks": "^7.6.17",
     "@storybook/preset-scss": "^1.0.3",
