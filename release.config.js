@@ -1,6 +1,7 @@
 const { execSync } = require('child_process')
 
 const CHANGELOG_HEADER = `# Changelog
+
 All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html), enforced with [semantic-release](https://github.com/semantic-release/semantic-release).`
 
@@ -158,6 +159,17 @@ function getDryRunConfig() {
 function getCIConfig() {
   // contains your normal semantic-release config
   // this will be used on your CI environment
+  const fs = require('fs')
+  const changelogPath = 'CHANGELOG.md'
+
+  if (fs.existsSync(changelogPath)) {
+    let content = fs.readFileSync(changelogPath, 'utf8')
+    if (content.startsWith(CHANGELOG_HEADER)) {
+      content = content.slice(CHANGELOG_HEADER.length).trimStart()
+      fs.writeFileSync(changelogPath, content, 'utf8')
+    }
+  }
+
   return {
     branches: ['develop'],
     plugins: [
