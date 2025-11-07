@@ -159,7 +159,7 @@ function getDryRunConfig() {
 function getCIConfig() {
   // contains your normal semantic-release config
   // this will be used on your CI environment
-  const fs = require('fs')
+  const fs = require('node:fs')
   const changelogPath = 'CHANGELOG.md'
 
   if (fs.existsSync(changelogPath)) {
