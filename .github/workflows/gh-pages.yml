@@ -3,12 +3,13 @@ name: github pages
 on:
   push:
     branches:
-      - develop  # Set a branch name to trigger deployment
+      - develop
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     timeout-minutes: ${{ fromJSON(vars.DEFAULT_JOB_TIMEOUT_MINUTES) }}
+
     steps:
       - uses: actions/checkout@v4
 
@@ -25,16 +26,29 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - run: npm install -g sass
       - run: npm ci
       - run: npm test
 
       - name: Build
         run: npm run build
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/develop'
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./storybook-static
+          path: ./storybook-static
+
+  deploy:
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
