@@ -20,7 +20,10 @@ bun:
 	bun run dev
 
 format:
-	npm run format-all
+	npm run format
+
+format-check:
+	npm run format:check
 
 dry:
 	npm run dry

@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
 
+permissions:
+  id-token: write  # Required for OIDC https://docs.npmjs.com/trusted-publishers
+
 jobs:
   dry-run:
     runs-on: ubuntu-latest
@@ -15,33 +18,17 @@ jobs:
           node-version: "22"
       - run: npm ci
       - name: Check formatting
-        run: |
-          set -eo pipefail
-          files_to_format=$(npm run format:check --silent || true)
-          if [ -n "$files_to_format" ]; then
-            echo "The following files are not formatted correctly:"
-            echo "$files_to_format"
-            {
-              echo "formatted_files<<EOF"
-              echo "$files_to_format"
-              echo "EOF"
-              echo "formatting_needed=true"
-            } >> $GITHUB_OUTPUT
-            exit 1
-          else
-            echo "All files are formatted correctly."
-            echo "formatting_needed=false" >> $GITHUB_OUTPUT
-          fi
-      - run: npm test
-      - uses: JS-DevTools/npm-publish@v3
+        run: make format-check
+      # Ensure npm 11.5.1 or later is installed
+      - name: Update npm
+        run: npm install -g npm@latest
+      - name: Dry run
         if: github.actor != 'dependabot[bot]'
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          dry-run: true
+        run: npm publish --dry-run
 
   publish:
     needs: dry-run
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.actor != 'dependabot[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: ${{ fromJSON(vars.DEFAULT_JOB_TIMEOUT_MINUTES) }}
     steps:
@@ -50,8 +37,8 @@ jobs:
         with:
           node-version: "22"
       - run: npm ci
-      - run: npm test
-      - uses: JS-DevTools/npm-publish@v3
-        if: github.actor != 'dependabot[bot]'
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+      # Ensure npm 11.5.1 or later is installed
+      - name: Update npm
+        run: npm install -g npm@latest
+      - name: Publish
+        run: npm publish
