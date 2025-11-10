@@ -1,6 +1,6 @@
 on:
   pull_request:
-    types: [opened, closed]
+    types: [opened, synchronize]
   push:
     branches: [main]
 
@@ -17,6 +17,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+          cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
       - name: Check formatting
