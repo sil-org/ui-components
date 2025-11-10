@@ -1,4 +1,4 @@
-declare module '@silintl/ui-components' {
+declare module '@sil-org/ui-components' {
   import type { SvelteComponent } from 'svelte'
   import type { writable } from 'svelte/store'
 
@@ -440,6 +440,6 @@ declare module '@silintl/ui-components' {
   export class Tour extends SvelteComponent<TourProps> {}
 }
 
-declare module '@silintl/ui-components/random' {
+declare module '@sil-org/ui-components/random' {
   export function generateRandomID(prefix?: string): string
 }

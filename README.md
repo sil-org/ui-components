@@ -4,7 +4,7 @@ Reusable Svelte components for some internal applications
 
 ## installation
 
-To install to your Svelte project, open your project's root directory in a terminal. Type or paste `npm i -D @silintl/ui-components` and press enter. Sass (depending on your bundler and plugins) and material-components-web are required to develop additional material web components in your app, but it may depend on your version of npm if they are necessary even if you don't (I haven't figured out which versions require them). Enter the commands `npm i -D material-components-web@14` and `npm i -D sass@1` (versions will vary if you use an older release of this library). You should already have Svelte 4 installed if you are using this library. Since Svelte 4 is mostly backwards compatible it is possible to use version 11 of this library in Svelte 3 projects although you should read about the changes [here](https://svelte.dev/docs/v4-migration-guide) to see if any breaking changes will affect it.
+To install to your Svelte project, open your project's root directory in a terminal. Type or paste `npm i -D @sil-org/ui-components` and press enter. Sass (depending on your bundler and plugins) and material-components-web are required to develop additional material web components in your app, but it may depend on your version of npm if they are necessary even if you don't (I haven't figured out which versions require them). Enter the commands `npm i -D material-components-web@14` and `npm i -D sass@1` (versions will vary if you use an older release of this library). You should already have Svelte 4 installed if you are using this library. Since Svelte 4 is mostly backwards compatible it is possible to use version 11 of this library in Svelte 3 projects although you should read about the changes [here](https://svelte.dev/docs/v4-migration-guide) to see if any breaking changes will affect it.
 
 If you are using typescript you will need to run `npm i -D tslib` to avoid a material-components-web type error. This will already be installed if you have set up SvelteKit with typescript using `npm create svelte@latest app-name`.
 
@@ -131,7 +131,7 @@ A list of all components and their props can be found in our running instance of
 
 After installation and bundler configuration all of the components are ready to be imported.
 
-Just include `import { Button } from '@silintl/ui-components'` (~~Sveltekit/~~Vite only projects will need the full url: `import { Button } from '../../node_modules/@silintl/ui-components/index.mjs`
+Just include `import { Button } from '@sil-org/ui-components'` (~~Sveltekit/~~Vite only projects will need the full url: `import { Button } from '../../node_modules/@sil-org/ui-components/index.mjs`
 ) in your script section to import Button and any other components you want to use.
 
 ## overriding default sass variables
@@ -156,7 +156,7 @@ An example of using Button and Card:
 
 ```
 <script>
-  import { Button, Card } from '@silintl/ui-components'
+  import { Button, Card } from '@sil-org/ui-components'
 
 	// ...
 </script>
@@ -174,7 +174,7 @@ An example of using Drawer:
 
 ```
 <script>
-  import { actions, Drawer } from '@silintl/ui-components'
+  import { actions, Drawer } from '@sil-org/ui-components'
 	// ...
 	$: menuItems = [
 			// ...
