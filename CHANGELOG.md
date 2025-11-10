@@ -5,13 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## [12.0.0](https://github.com/sil-org/ui-components/compare/v11.10.2...v12.0.0) (2025-11-10)
 
-
 ### ⚠ BREAKING CHANGES
 
-* **package:** Users will need to update imports from
-@silintl/ui-components to @sil-org/ui-components
+- **package:** Users will need to update imports from
+  @silintl/ui-components to @sil-org/ui-components
 
-* **package:** update package scope to [@sil-org](https://github.com/sil-org) ([6759311](https://github.com/sil-org/ui-components/commit/675931154f56cc39aa4c5ae13c18881238831b1f))
+- **package:** update package scope to [@sil-org](https://github.com/sil-org) ([6759311](https://github.com/sil-org/ui-components/commit/675931154f56cc39aa4c5ae13c18881238831b1f))
 
 ### [11.10.2](https://github.com/sil-org/ui-components/compare/v11.10.1...v11.10.2) (2025-11-07)
 
