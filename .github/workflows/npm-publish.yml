@@ -1,8 +1,7 @@
 on:
-  pull_request:
-    types: [opened, synchronize]
   push:
-    branches: [main]
+    branches:
+      - 'release/**'
 
 permissions:
   id-token: write  # Required for OIDC https://docs.npmjs.com/trusted-publishers
