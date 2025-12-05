@@ -171,7 +171,7 @@ function getCIConfig() {
   }
 
   return {
-    branches: (branch) => branch.startsWith('release'),
+    branches: [{ name: 'release/*', prerelease: false }],
     plugins: [
       ...plugins,
       ['@semantic-release/changelog', { changelogTitle: CHANGELOG_HEADER }],
