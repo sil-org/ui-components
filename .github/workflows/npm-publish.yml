@@ -1,6 +1,6 @@
 name: Release
 on:
-  push:
+  create:
     branches:
       - "release/**"
 
