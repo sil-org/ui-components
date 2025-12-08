@@ -47,7 +47,12 @@ jobs:
         run: |
           RELEASE_BRANCH="release/v${{ steps.version.outputs.version }}"
 
+          if git ls-remote --exit-code --heads origin "$RELEASE_BRANCH"; then
+            echo "Branch $RELEASE_BRANCH already exists, skipping creation"
+            exit 0
+          fi
+
           git checkout -B "$RELEASE_BRANCH"
-          git push origin "$RELEASE_BRANCH" --force
+          git push origin "$RELEASE_BRANCH"
 
           echo "Created $RELEASE_BRANCH"
