@@ -1,6 +1,7 @@
 name: Publish
 on:
-  workflow_dispatch:
+  release:
+    types: [published]
 
 permissions:
   id-token: write  # Required for OIDC https://docs.npmjs.com/trusted-publishers
@@ -22,8 +23,6 @@ jobs:
       - run: npm ci
       - name: Check formatting
         run: make format-check
-      - name: Update npm
-        run: npm install -g npm@latest
       - name: Dry run publish
         if: github.actor != 'dependabot[bot]'
         run: npm publish --dry-run
