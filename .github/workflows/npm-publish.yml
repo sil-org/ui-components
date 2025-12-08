@@ -1,4 +1,4 @@
-name: Release
+name: Publish
 on:
   push:
     branches:
@@ -6,31 +6,12 @@ on:
 
 permissions:
   id-token: write  # Required for OIDC https://docs.npmjs.com/trusted-publishers
-  contents: write   # semantic-release must push tags + changelog commits
+  contents: read
 
 
 jobs:
-  semantic-release:
-    name: Semantic Release
-    runs-on: ubuntu-latest
-    timeout-minutes: ${{ fromJSON(vars.DEFAULT_JOB_TIMEOUT_MINUTES) }}
-    outputs:
-      new_version: ${{ steps.sr.outputs.new_release_version }}
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      - id: sr
-        name: Run semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
   dry-run:
     name: NPM Dry Run
-    needs: semantic-release
     runs-on: ubuntu-latest
     timeout-minutes: ${{ fromJSON(vars.DEFAULT_JOB_TIMEOUT_MINUTES) }}
     steps:
@@ -51,7 +32,7 @@ jobs:
 
   publish:
     name: Publish to NPM
-    needs: [semantic-release, dry-run]
+    needs: dry-run
     runs-on: ubuntu-latest
     # Only publish on release branches — semantic-release has already bumped version
     if: github.actor != 'dependabot[bot]'
