@@ -1,6 +1,6 @@
 {
   "files.trimTrailingWhitespace": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.defaultFormatter": "prettier.prettier-vscode",
   "editor.rulers": [120],
 
   "[svelte]": {
