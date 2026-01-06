@@ -98,7 +98,7 @@ const plugins = [
           },
           {
             type: 'build',
-            release: 'Changed',
+            section: 'Changed',
           },
           {
             type: 'feat',
