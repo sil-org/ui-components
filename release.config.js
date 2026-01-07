@@ -25,6 +25,10 @@ const plugins = [
           release: 'minor',
         },
         {
+          type: 'build',
+          release: 'patch',
+        },
+        {
           type: 'feat',
           release: 'minor',
         },
@@ -91,6 +95,10 @@ const plugins = [
           {
             type: 'add',
             section: 'Added',
+          },
+          {
+            type: 'build',
+            section: 'Changed',
           },
           {
             type: 'feat',
