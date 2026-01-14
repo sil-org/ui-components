@@ -54,7 +54,7 @@ $: valueNotDivisibleByStep =
   (internalValue && (internalValue / Number(step)).toFixed(2) % 1 !== 0) || valueHasTooManyDecPlaces
 $: internalValue = Number(value) || 0
 $: warn = showWarn
-$: value, addOrRemoveInvalidClass(error, element)
+$: (value, addOrRemoveInvalidClass(error, element))
 $: addOrRemoveInvalidClass(showError || showWarn, element)
 
 onMount(() => {
