@@ -45,7 +45,7 @@ $: hasExceededMaxLength = maxlength && value.length > maxlength
 $: error = hasExceededMaxLength || (hasFocused && hasBlurred && required && !value)
 $: warn = showWarn
 $: showCounter = maxlength && value.length / maxlength > 0.85
-$: value, addOrRemoveInvalidClass(error, element)
+$: (value, addOrRemoveInvalidClass(error, element))
 $: addOrRemoveInvalidClass(showError || showWarn, element)
 
 onMount(() => {
