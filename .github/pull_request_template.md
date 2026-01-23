@@ -25,4 +25,4 @@
 ### Feature branch checklist
 
 - [ ] Documentation (README, etc.)
-- [ ] Run `make format`, `make dry` and `make install`
+- [ ] Run `make format` and `make install`
