@@ -62,7 +62,7 @@ const isMenuItemActive = (currentUrl, menuItemUrl, urlPattern) => {
   return currentUrl === menuItemUrl || (urlPattern && RegExp(urlPattern).test(currentUrl))
 }
 
-$: (toggle, toggleDrawer())
+$: toggle, toggleDrawer()
 
 const showAppropriateThings = () => {
   showAppropriateDrawer()

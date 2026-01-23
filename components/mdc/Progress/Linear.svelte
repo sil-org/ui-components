@@ -9,7 +9,7 @@ export let value = 0
 let element = {}
 let mdcProgress
 
-$: (value, mdcProgress && (mdcProgress.progress = value))
+$: value, mdcProgress && (mdcProgress.progress = value)
 
 onMount(() => {
   mdcProgress = new MDCLinearProgress(element)
