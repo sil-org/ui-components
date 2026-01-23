@@ -1,6 +1,10 @@
 # ui-components
 
-Reusable Svelte components for some internal applications
+Reusable Svelte components for some internal applications.
+
+## Deprecation Notice
+
+This library is deprecated and no components will be added.
 
 ## installation
 
@@ -212,7 +216,6 @@ An example of using Drawer:
 ## storybook
 
 Try out our components and see usage examples at https://sil-org.github.io/ui-components/.
-You can also run storybook locally. Just run `git clone git@github.com:sil-org/ui-components.git` on your machine and run `npm install` then `npm run dev` in your terminal. Storybook should open a browser window when it finishes building.
 
 ## CSS utility classes
 

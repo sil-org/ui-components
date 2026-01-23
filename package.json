@@ -1,19 +1,13 @@
 {
   "name": "@sil-org/ui-components",
-  "version": "12.0.2",
+  "version": "12.0.3",
   "description": "Reusable Svelte components for some internal applications",
   "main": "index.mjs",
   "module": "index.mjs",
   "svelte": "index.mjs",
   "scripts": {
-    "test": "echo test",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "dev": "sass components/global.scss components/global.css; storybook dev -p 6007",
-    "build": "sass components/global.scss components/global.css; storybook build",
-    "dry": "npx semantic-release --dry-run",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "format:check": "prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -41,22 +35,8 @@
     "svelte": "^4.0.0"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^7.6.17",
-    "@storybook/addon-docs": "^7.6.17",
-    "@storybook/addon-essentials": "^7.6.17",
-    "@storybook/addon-interactions": "^7.6.17",
-    "@storybook/addon-links": "^7.6.17",
-    "@storybook/addon-svelte-csf": "^4.1.1",
-    "@storybook/blocks": "^7.6.17",
-    "@storybook/preset-scss": "^1.0.3",
-    "@storybook/svelte": "^7.6.17",
-    "@storybook/svelte-vite": "^7.6.17",
-    "@storybook/test": "^7.6.17",
     "prettier": "^3.0.3",
     "prettier-plugin-svelte": "^3.2.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sass": "1.71.x",
-    "storybook": "^10.2.0"
+    "sass": "1.71.x"
   }
 }
