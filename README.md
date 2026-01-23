@@ -220,4 +220,4 @@ Classes from [global.scss](https://github.com/sil-org/ui-components/blob/develop
 
 ## contributions
 
-Please follow semantic versioning for changes. Update the version and Changelog then merge to main. Once that is created you can create a release and tag and then run the Github action `npm-publish` manually from the Github actions page.
+Please follow semantic versioning for changes. Update the version and Changelog then merge to main. Once that is created you can create a release and tag and then run the Github action `Publish` manually from the Github actions page.
