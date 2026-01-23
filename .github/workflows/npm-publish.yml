@@ -1,7 +1,6 @@
 name: Publish
 on:
-  release:
-    types: [published]
+  workflow_dispatch:
 
 permissions:
   id-token: write  # Required for OIDC https://docs.npmjs.com/trusted-publishers
@@ -15,6 +14,8 @@ jobs:
     timeout-minutes: ${{ fromJSON(vars.DEFAULT_JOB_TIMEOUT_MINUTES) }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
