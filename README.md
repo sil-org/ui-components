@@ -220,30 +220,4 @@ Classes from [global.scss](https://github.com/sil-org/ui-components/blob/develop
 
 ## contributions
 
-All commit messages must follow the format defined in our [release.config.js file](https://github.com/sil-org/ui-components/blob/develop/release.config.js) for a release to be triggered upon merging to main. Here are basic examples:
-
-- `add(Button): Added 'class' prop` (minor release)
-
-- `feat(components): Add Slider component and story` (minor release)
-
-- `fix(Button): fixed url prop not working` (patch release)
-
-- `remove(Card): Removed secondary text padding` (major release)
-
-  `<BLANK LINE>`
-
-  `BREAKING CHANGE: The secondary text padding is now 0 by default. Use the secondary-text class to adjust padding as desired.`
-
-- `change(dependencies): updated to sass 1.58` (major release)
-
-  `<BLANK LINE>`
-
-  `BREAKING: update sass to match this version if installed`
-
-- `security(dependencies): updated deps with npm update` (patch release)
-
-- `deprecate(CustomCard): Deprecated CustomCard as it will be removed` (minor release)
-
-These will trigger a patch or minor release depending on the config. A major release can be triggered by including 'BREAKING CHANGE', 'BREAKING CHANGES', 'BREAKING' in the footer section followed by ': <description/instructions>' where <description/instructions> details what the breaking change is and/or how to migrate. If this is not done, an empty commit with the proper format can be pushed to trigger the release or by using `git rebase -i` to rewrite the commit messages. commits that contains '[skip release]' or '[release skip]' in their message will be excluded from the commit analysis and won't participate in the release type determination. See https://github.com/semantic-release/semantic-release, https://semantic-release.gitbook.io/semantic-release/support/faq and https://www.conventionalcommits.org/en/v1.0.0/#specification for more details.
-
-Semantic Release will also update the version and the CHANGELOG based on the commit messages. Use tags/types that correspond to the release type and if you need to you can change it in the Changelog after release.
+Please follow semantic versioning for changes. Update the version and Changelog then merge to main. Once that is created you can create a release and tag and then run the Github action `Publish` manually from the Github actions page.

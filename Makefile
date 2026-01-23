@@ -15,18 +15,11 @@ build-sb:
 clean:
 	npm run clean
 
-bun:
-	bun install
-	bun run dev
-
 format:
 	npm run format
 
 format-check:
 	npm run format:check
-
-dry:
-	npm run dry
 
 test:
 	npm run test
