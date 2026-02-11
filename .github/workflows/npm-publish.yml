@@ -32,7 +32,6 @@ jobs:
     name: Publish to NPM
     needs: dry-run
     runs-on: ubuntu-latest
-    # Only publish on release branches — semantic-release has already bumped version
     if: github.actor != 'dependabot[bot]'
     timeout-minutes: ${{ fromJSON(vars.DEFAULT_JOB_TIMEOUT_MINUTES) }}
     steps:
