@@ -28,11 +28,11 @@
   "homepage": "https://github.com/sil-org/ui-components#readme",
   "peerDependencies": {
     "material-components-web": "^14.0.0",
-    "svelte": "^4.0.0"
+    "svelte": "^5.53.6"
   },
   "dependencies": {
     "material-components-web": "^14.0.0",
-    "svelte": "^4.0.0"
+    "svelte": "^5.53.6"
   },
   "devDependencies": {
     "prettier": "^3.0.3",
