@@ -31,6 +31,8 @@ export let showError = false
 export let showWarn = false
 /** @type {string} The type of the text input field. */
 export let type = 'text'
+/** @type {string} The pattern to validate the text input field. */
+export let pattern = ''
 
 const labelID = generateRandomID('text-label-')
 
@@ -102,6 +104,7 @@ const focus = (node) => autofocus && node.focus()
     {name}
     {required}
     {disabled}
+    {pattern}
     {...{ type }}
     maxlength="524288"
     {placeholder}

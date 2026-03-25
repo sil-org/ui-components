@@ -322,6 +322,7 @@ declare module '@sil-org/ui-components' {
     icon?: string
     type?: string
     placeholder?: string
+    pattern?: string
     maxlength?: number
     autofocus?: boolean
     disabled?: boolean
