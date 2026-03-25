@@ -62,7 +62,7 @@ afterUpdate(() => {
 const focus = (node) => autofocus && node.focus()
 </script>
 
-// destination.ToAddresses = to<label
+<label
   class="mdc-text-field mdc-text-field--outlined {$$props.class || ''} textfield-radius"
   class:mdc-text-field--no-label={!label}
   class:mdc-text-field--disabled={disabled}
