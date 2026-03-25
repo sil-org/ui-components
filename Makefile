@@ -1,16 +1,4 @@
-start: install dev
-
-install:
-	npm install
-
-dev:
-	npm run dev
-
-build:
-	npm run build
-
-build-sb:
-	npm run build:prod
+start: install
 
 clean:
 	npm run clean
@@ -21,5 +9,3 @@ format:
 format-check:
 	npm run format:check
 
-test:
-	npm run test
