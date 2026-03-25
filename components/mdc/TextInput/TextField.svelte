@@ -31,6 +31,8 @@ export let showError = false
 export let showWarn = false
 /** @type {string} The type of the text input field. */
 export let type = 'text'
+/** @type {string} The pattern to validate the text input field. */
+export let pattern = ''
 
 const labelID = generateRandomID('text-label-')
 
@@ -60,7 +62,7 @@ afterUpdate(() => {
 const focus = (node) => autofocus && node.focus()
 </script>
 
-<label
+// destination.ToAddresses = to<label
   class="mdc-text-field mdc-text-field--outlined {$$props.class || ''} textfield-radius"
   class:mdc-text-field--no-label={!label}
   class:mdc-text-field--disabled={disabled}
@@ -102,6 +104,7 @@ const focus = (node) => autofocus && node.focus()
     {name}
     {required}
     {disabled}
+    {pattern}
     {...{ type }}
     maxlength="524288"
     {placeholder}
