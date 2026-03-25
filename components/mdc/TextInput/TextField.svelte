@@ -32,7 +32,7 @@ export let showWarn = false
 /** @type {string} The type of the text input field. */
 export let type = 'text'
 /** @type {string} The pattern to validate the text input field. */
-export let pattern = ''
+export let pattern = undefined
 
 const labelID = generateRandomID('text-label-')
 
