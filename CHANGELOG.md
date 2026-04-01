@@ -15,9 +15,9 @@ Unpublished as it was broken and not needed
 
 ### Added
 
-- Add pattern
+- Add pattern prop to TextField
 
-### [12.0.3](https://github.com/sil-org/ui-components/compare/v12.0.1...v12.0.2) (2026-01-23)
+### [12.0.3](https://github.com/sil-org/ui-components/compare/v12.0.2...v12.0.3) (2026-01-23)
 
 ### Security
 
