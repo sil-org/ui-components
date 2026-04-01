@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+### [12.1.1](https://github.com/sil-org/ui-components/compare/v12.1.0...v12.1.1) (2026-03-25)
+
+### Removed
+
+- Remove pattern prop filtering as it was broken and filtered to '' when not set
+
+### [12.1.0](https://github.com/sil-org/ui-components/compare/v12.0.3...v12.1.0) (2026-03-25)
+
+Unpublished as it was broken and not needed
+
+### Added
+
+- Add pattern
+
 ### [12.0.3](https://github.com/sil-org/ui-components/compare/v12.0.1...v12.0.2) (2026-01-23)
 
 ### Security
