@@ -13,7 +13,7 @@ To install to your Svelte project, open your project's root directory in a termi
 If you are using typescript you will need to run `npm i -D tslib` to avoid a material-components-web type error. This will already be installed if you have set up SvelteKit with typescript using `npm create svelte@latest app-name`.
 
 You will also want to follow the example below for your index.html (app.html for sveltekit templates) for Material Icons to work and for Google fonts to load.
-see https://github.com/material-components/material-web#2-write-html-and-javascript
+see https://github.com/material-components/material-web#quick-start
 
 Your index.html could look something like this
 
@@ -38,11 +38,11 @@ Your index.html could look something like this
 
 See `theming` and `typography` for more details on how to configure fonts and themes.
 
-See https://google.github.io/material-design-icons/#sizing for sizing material icons.
+See https://developers.google.com/fonts/docs/material_icons#sizing for sizing material icons.
 
 ## theming
 
-If you are using an [MDC theme](https://material.io/develop/web/docs/theming) you may want to include a \_theme.scss file and import it into
+If you are using an [MDC theme](https://m2.material.io/develop/web/docs/theming/) you may want to include a \_theme.scss file and import it into
 \_index.scss.
 
 Import \_index.scss or other file(s) that contains material styling variables like --mdc-theme-primary --mdc-theme-secondary and other root variables to the App.svelte (your base +layout.svelte in sveltekit templates) file so they get applied to the ui-components.
@@ -51,7 +51,7 @@ See https://github.com/sil-org/ui-components/blob/develop/stories/_theme.scss fo
 
 ## typography
 
-See [typography](https://material.io/develop/web/components/typography)
+See [typography](https://m2.material.io/develop/web/components/typography/)
 
 In your \_typography.scss or similar file include the following snippet:
 
@@ -113,7 +113,7 @@ module.exports = {
 ## Sveltekit
 
 Using this library in [Sveltekit](https://github.com/sveltejs/kit) is now fully supported. Below were a number of issues which may still apply if you are trying to use Vite without Svelte-kit.
-https://kit.svelte.dev/faq#packages
+https://svelte.dev/docs/kit/faq
 
 https://vitejs.dev/guide/dep-pre-bundling.html
 
@@ -146,7 +146,7 @@ In your main sass file just use the following pattern to override any sass varia
 
 ## examples and templates
 
-See our [Storybook](https://sil-org.github.io/ui-components/?path=/docs/example-introduction--page) for examples. Just click on the component you want to learn more about. You can also click on the "Docs" tab to right of "Canvas" in the top left of the page and then click "Show code" to see code examples. See our [Button](https://sil-org.github.io/ui-components/?path=/docs/atoms-button--primary) Docs for example.
+See our [Storybook](https://sil-org.github.io/ui-components/) for examples. Just click on the component you want to learn more about. You can also click on the "Docs" tab to right of "Canvas" in the top left of the page and then click "Show code" to see code examples. See our [Button](https://sil-org.github.io/ui-components/?path=/docs/atoms-button--primary) Docs for example.
 
 An opinionated Svelte template using rollup https://github.com/sil-org/the-way-svelte
 
