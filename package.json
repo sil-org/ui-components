@@ -1,6 +1,6 @@
 {
   "name": "@sil-org/ui-components",
-  "version": "12.1.1",
+  "version": "13.0.0",
   "description": "Reusable Svelte components for some internal applications",
   "main": "index.mjs",
   "module": "index.mjs",
@@ -28,15 +28,15 @@
   "homepage": "https://github.com/sil-org/ui-components#readme",
   "peerDependencies": {
     "material-components-web": "^14.0.0",
-    "svelte": "^4.0.0"
+    "svelte": "^4.0.0 || ^5.0.0"
   },
   "dependencies": {
-    "material-components-web": "^14.0.0",
-    "svelte": "^4.0.0"
+    "material-components-web": "^14.0.0"
   },
   "devDependencies": {
-    "prettier": "^3.0.3",
-    "prettier-plugin-svelte": "^3.2.2",
-    "sass": "1.71.x"
+    "prettier": "3.8.1",
+    "prettier-plugin-svelte": "^3.5.1",
+    "sass": "^1.70.0",
+    "svelte": "^5.0.0"
   }
 }
