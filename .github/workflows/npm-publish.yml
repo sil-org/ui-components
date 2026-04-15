@@ -44,7 +44,5 @@ jobs:
           cache: npm
       - run: npm ci
       # Ensure npm 11.5.1 or later is installed
-      - name: Update npm
-        run: npm install -g npm@latest
       - name: Publish
-        run: npm publish --provenance --access public
+        run: npx --yes npm@latest publish --provenance --access public
