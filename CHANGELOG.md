@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+### [13.0.0](https://github.com/sil-org/ui-components/compare/v12.1.1...v13.0.0) (2026-04-14)
+
+### Changed
+
+- Svelte 5 is now the target library and has been added to peerDependencies. Component code hasn't changed, and Svelte 4 is still included so still works the same. Svelte has been upgraded and moved from `dependencies` to `devDependencies`.
+
 ### [12.1.1](https://github.com/sil-org/ui-components/compare/v12.1.0...v12.1.1) (2026-03-25)
 
 ### Removed

@@ -8,7 +8,7 @@ This library is deprecated and no components will be added.
 
 ## installation
 
-To install to your Svelte project, open your project's root directory in a terminal. Type or paste `npm i -D @sil-org/ui-components` and press enter. Sass (depending on your bundler and plugins) and material-components-web are required to develop additional material web components in your app, but it may depend on your version of npm if they are necessary even if you don't (I haven't figured out which versions require them). Enter the commands `npm i -D material-components-web@14` and `npm i -D sass@1` (versions will vary if you use an older release of this library). You should already have Svelte 4 installed if you are using this library. Since Svelte 4 is mostly backwards compatible it is possible to use version 11 of this library in Svelte 3 projects although you should read about the changes [here](https://svelte.dev/docs/v4-migration-guide) to see if any breaking changes will affect it.
+To install to your Svelte project, open your project's root directory in a terminal. Type or paste `npm i @sil-org/ui-components` and press enter. Sass (depending on your bundler and plugins) and material-components-web are required to develop additional material web components in your app, but it may depend on your version of npm if they are necessary even if you don't (I haven't figured out which versions require them). Enter the commands `npm i material-components-web@14` and `npm i sass@1` (versions will vary if you use an older release of this library). You should already have Svelte 4 or 5 installed if you are using this library. Since Svelte 4/5 is mostly backwards compatible it is possible to use versions >= 11 of this library in Svelte 3 projects although you should read about the changes [here](https://svelte.dev/docs/v4-migration-guide) to see if any breaking changes will affect it.
 
 If you are using typescript you will need to run `npm i -D tslib` to avoid a material-components-web type error. This will already be installed if you have set up SvelteKit with typescript using `npm create svelte@latest app-name`.
 
@@ -69,7 +69,7 @@ and something similar to the following:
 
 and then import it to your sass entry point like \_index.scss. You may prefer to declare your root typography rules elsewhere (eg. index.html) which is also valid.
 
-## bundler configuration
+## bundler configuration (outdated)
 
 SvelteKit won't need a bundler as it uses Vite, but Svelte projects will need a bundler (rollup or webpack most likely) configuration. If you are using rollup your plugins in your "rollup.config.js" should look something like this taking special note of postcss and svelte:
 
@@ -148,13 +148,13 @@ In your main sass file just use the following pattern to override any sass varia
 
 See our [Storybook](https://sil-org.github.io/ui-components/) for examples. Just click on the component you want to learn more about. You can also click on the "Docs" tab to right of "Canvas" in the top left of the page and then click "Show code" to see code examples. See our [Button](https://sil-org.github.io/ui-components/?path=/docs/atoms-button--primary) Docs for example.
 
-An opinionated Svelte template using rollup https://github.com/sil-org/the-way-svelte
+An opinionated Svelte template using rollup https://github.com/sil-org/the-way-svelte (Archive)
 
-A template using Vite https://github.com/hobbitronics/mikes-svelte-template
+A template using Vite https://github.com/hobbitronics/mikes-svelte-template (Arvice)
 
-A template using SvelteKit https://github.com/hobbitronics/sveltekit-ui-components
+A template using SvelteKit https://github.com/hobbitronics/sveltekit-ui-components (Archive)
 
-If you don't want to use Sveltekit or the templates above and are building a single page app with routify then it is recommended to use this template https://github.com/roxiness/routify-starter (this library not pre-installed)
+If you don't want to use Sveltekit and are building with Routify then it is recommended to follow the [Routify documentation](https://routify.dev/docs/guide/installation/starter-repo) (this library not pre-installed)
 
 An example of using Button and Card:
 
