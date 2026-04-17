@@ -47,7 +47,7 @@ If you are using an [MDC theme](https://m2.material.io/develop/web/docs/theming/
 
 Import \_index.scss or other file(s) that contains material styling variables like --mdc-theme-primary --mdc-theme-secondary and other root variables to the App.svelte (your base +layout.svelte in sveltekit templates) file so they get applied to the ui-components.
 
-See https://github.com/sil-org/ui-components/blob/develop/stories/_theme.scss for exposed theme properties.
+See https://github.com/sil-org/ui-components/blob/main/stories/_theme.scss for exposed theme properties.
 
 ## typography
 
@@ -140,7 +140,7 @@ Just include `import { Button } from '@sil-org/ui-components'` (~~Sveltekit/~~Vi
 
 ## overriding default sass variables
 
-In your main sass file just use the following pattern to override any sass variables. See https://github.com/sil-org/ui-components/blob/develop/stories/_index.scss for exposed sass variables.
+In your main sass file just use the following pattern to override any sass variables. See https://github.com/sil-org/ui-components/blob/main/stories/_index.scss for exposed sass variables.
 
 `@use './components/mdc/Button' with ( $radius: 16px );`
 
@@ -219,7 +219,7 @@ Try out our components and see usage examples at https://sil-org.github.io/ui-co
 
 ## CSS utility classes
 
-Classes from [global.scss](https://github.com/sil-org/ui-components/blob/develop/components/global.scss) can be applied to all components and even components and elements from your app. Since classes applied to Svelte components using `$$props.class` (e.g. `Button class="my-class"`) need to be global in scope these utility classes can be handy. Alternatively you can use `:global(.my-class) {...}` inside your `<style>` tags (which makes them truly global css styles so be careful!) or declare global styles elsewhere.
+Classes from [global.scss](https://github.com/sil-org/ui-components/blob/main/components/global.scss) can be applied to all components and even components and elements from your app. Since classes applied to Svelte components using `$$props.class` (e.g. `Button class="my-class"`) need to be global in scope these utility classes can be handy. Alternatively you can use `:global(.my-class) {...}` inside your `<style>` tags (which makes them truly global css styles so be careful!) or declare global styles elsewhere.
 
 ## contributions
 
