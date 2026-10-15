@@ -1,6 +1,6 @@
 {
   "name": "@sil-org/ui-components",
-  "version": "13.0.0",
+  "version": "13.0.3",
   "description": "Reusable Svelte components for some internal applications",
   "main": "index.mjs",
   "module": "index.mjs",
